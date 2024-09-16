@@ -3,14 +3,10 @@ package main
 import (
 	"encoding/gob"
 	"fmt"
-	"log"
 	"net"
 	"os"
 
 	"github.com/David-Antunes/network-emulation-proxy/xdp"
-	"github.com/google/gopacket"
-	"github.com/google/gopacket/layers"
-	"github.com/google/gopacket/pcapgo"
 )
 
 func main() {
@@ -38,7 +34,7 @@ func main() {
 			panic(err)
 		}
 
-    err := enc.Encode(&frame)
+    err = enc.Encode(&frame)
     if err != nil {
       panic(err)
     }
